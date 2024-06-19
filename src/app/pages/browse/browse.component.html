@@ -1,0 +1,35 @@
+<app-header [userImg]="userProfileImg" [userName]="name" />
+<app-banner
+  [bannerTitle]="(bannerDetail$ | async)?.original_title"
+  [bannerOverview]="(bannerDetail$ | async)?.overview"
+  [key]="(bannerVideo$ | async)?.results[0].key"
+/>
+<app-movie-carousel
+  [title]="'بیشترین بازدید در پلتفرم'"
+  [videoContents]="movies"
+/>
+
+<app-movie-carousel
+  [title]="'برنامه های تلویزیونی پرطرفدار'"
+  [videoContents]="tvShows"
+/>
+
+<app-movie-carousel
+  [title]="'در حال پخش '"
+  [videoContents]="nowPlayingMovies"
+/>
+
+<app-movie-carousel
+  [title]="'فیلم های محبوب'"
+  [videoContents]="popularMovies"
+/>
+
+<app-movie-carousel
+  [title]="'فیلم های دارای رتبه برتر'"
+  [videoContents]="topRatedMovies"
+/>
+
+<app-movie-carousel
+  [title]="'فیلم های آینده'"
+  [videoContents]="upcomingMovies"
+/>

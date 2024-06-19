@@ -1,0 +1,30 @@
+<header
+  class="sticky top-0 h-[68px] z-10 bg-[#141414] bg-opacity-90 flex items-center justify-between px-10"
+>
+  <!-- Welcome User | Profile Img | Sign Ou -->
+  <div class="flex items-center gap-4 text-left text-white">
+    <a href="/">خروج</a>
+    &nbsp; | &nbsp;
+
+    <div class="flex items-center gap-2">
+      <a href="/"
+        ><span
+          >خوش آمدی <strong>{{ userName }}</strong></span
+        ></a
+      >
+      <img class="rounded-3xl" [src]="userImg" width="42" alt="user-img" />
+    </div>
+  </div>
+
+  <!-- Logo + Nav Items -->
+  <div class="flex gap-5">
+    <ul *ngFor="let item of navList" class="flex items-center text-left">
+      <li
+        class="text-sm cursor-pointer text-neutral-200 font-extralight hover:text-gray-400 transition-[1s]"
+      >
+        {{ item }}
+      </li>
+    </ul>
+    <img width="110" src="/pngwing.png" alt="netflix logo" />
+  </div>
+</header>
